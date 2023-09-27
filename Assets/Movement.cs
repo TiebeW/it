@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
         Move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(speed * Move, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isJumping == false)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
         }
@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Ground") && isJumping == false )
+        if (other.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
         }
