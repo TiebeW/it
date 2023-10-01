@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour
 
     public bool isJumping;
 
+    public CoinManager cm;
+
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,15 @@ public class Movement : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isJumping = true;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+            cm.coinCount++;
         }
     }
 }
