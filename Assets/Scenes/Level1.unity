@@ -2113,7 +2113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCount: 0
-  coinText: {fileID: 0}
 --- !u!4 &1287143156
 Transform:
   m_ObjectHideFlags: 0
