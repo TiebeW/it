@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class EndScreen : MonoBehaviour
 {
-    public void PlayGame()
+    public void EndGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Menu1");
     }
 }

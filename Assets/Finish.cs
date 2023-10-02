@@ -20,7 +20,7 @@ public class Finish : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("Ending1");
         }
     }
 }
